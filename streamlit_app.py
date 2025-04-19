@@ -75,12 +75,11 @@ def listedinTitulos():
 
 # Configuración del dashboard
 st.title('Dashboard de Netflix')
-st.sidebar.header('Selecciona una visualización')
-option = st.sidebar.selectbox('Selecciona:', ('Directores', 'Series vs Películas', 'Clasificaciones'))
+st.header('Top directores con mas peliculas/series')
+topDirectores(df)
 
-if option == 'Directores':
-    topDirectores()
-elif option == 'Series vs Películas':
-    comparacion()
-elif option == 'Listed_In titulos':
-    listedinTitulos()
+st.header('Comparación entre Series y Películas')
+comparacion(df)
+
+st.headr('Listed_In Comparativo')
+listedinTitulos(df)
